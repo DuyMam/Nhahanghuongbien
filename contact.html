@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ | Hương Biển Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --primary-dark: #0a1421; /* Màu xanh đen đồng bộ */
+            --gold-accent: #c5a059;  /* Màu vàng đồng đồng bộ */
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--primary-dark); /* Nền tối toàn trang */
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* --- Custom Navigation (Giống hệt index.html) --- */
+        .custom-nav {
+            background-color: var(--primary-dark) !important;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+
+        .logo-icon-box {
+            color: var(--gold-accent);
+            font-size: 1.5rem;
+        }
+
+        .nav-links .nav-link {
+            color: white !important;
+            font-weight: 400;
+            margin: 0 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links .nav-link:hover, 
+        .nav-links .nav-link.active {
+            color: var(--gold-accent) !important;
+        }
+
+        .btn-reservation-box .btn-reservation {
+            background-color: var(--gold-accent);
+            color: white !important;
+            padding: 8px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        /* --- Contact Section (Giao diện giống ảnh bạn gửi) --- */
+        .res-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 20px 60px; /* Padding để không bị Nav che */
+            background-image: url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070'); /* Ảnh nền mờ */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .res-container::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.75);
+        }
+
+        .res-box {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .res-image {
+            flex: 1;
+            background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974'); /* Thay bằng ảnh ban công của bạn */
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+
+        .res-form-area {
+            flex: 1.2;
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+
+        .res-form-area h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+
+        /* Contact Items */
+        .contact-info-box {
+            text-align: left;
+            display: inline-block;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+            background: white;
+            color: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+
+        .contact-item h5 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--gold-accent);
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .contact-item p {
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .phone-number {
+            color: #ff4d4d !important;
+            font-weight: bold !important;
+            font-size: 1.5rem !important;
+        }
+
+        .btn-call {
+            border: 1px solid white;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-call:hover {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        @media (max-width: 768px) {
+            .res-box { flex-direction: column; }
+            .res-image { min-height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <span class="logo-text">HƯƠNG BIỂN</span>
+            </a>
+            
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Thực Đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Liên Hệ</a></li>
+                    <li class="nav-item btn-reservation-box ms-lg-3">
+                        <a class="btn-reservation" href="reservation.html">Đặt Bàn Ngay</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="res-container">
+        <div class="res-box animate__animated animate__fadeInUp">
+            <div class="res-image"></div> 
+            
+            <div class="res-form-area">
+                <h2>Thông Tin Liên Hệ</h2>
+                <p class="subtitle">Cảm ơn quý khách đã quan tâm đến Nhà hàng Hương Biển.<br>Chúng tôi luôn sẵn lòng phục vụ!</p>
+                
+                <div class="contact-info-box">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-store"></i></div>
+                        <div>
+                            <h5>Nhà Hàng</h5>
+                            <p>Hương Biển Restaurant</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-fish"></i></div>
+                        <div>
+                            <h5>Chuyên Phục Vụ</h5>
+                            <p>Các Món Ăn Hải Sản Tươi Sống</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h5>Địa Chỉ</h5>
+                            <p>Biển Cửa Lò, Nghệ An</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                        <div>
+                            <h5>Hotline Đặt Bàn / Hỗ Trợ</h5>
+                            <p class="phone-number">0829 782 565</p>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <a href="tel:0829782565" class="btn-call">
+                    <i class="fa-solid fa-phone me-2"></i> Gọi Ngay Cho Chúng Tôi
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

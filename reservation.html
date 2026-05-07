@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Bàn | Hương Biển Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body class="res-body">
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <span class="logo-text">HƯƠNG BIỂN</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Thực Đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                </ul>
+        <div class="btn-reservation"><a class="nav-link" href="reservation.html">Đặt Bàn Ngay</a></div>
+    </nav>
+
+    <section class="res-container">
+        <div class="res-box">
+            <div class="res-image"></div>
+            <div class="res-form-area">
+                <h2>Đặt Chỗ Trước</h2>
+                <p>Vui lòng điền thông tin để chúng tôi phục vụ bạn tốt nhất.</p>
+                <form>
+                    <div class="input-group">
+                        <i class="fa fa-user"></i>
+                        <input type="text" placeholder="Tên của bạn" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-phone"></i>
+                        <input type="tel" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <i class="fa fa-calendar"></i>
+                            <input type="date" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fa fa-clock"></i>
+                            <input type="time" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-users"></i>
+                        <select>
+                            <option value="1">1 Người</option>
+                            <option value="2">2 Người</option>
+                            <option value="4">4 Người</option>
+                            <option value="10">Tiệc lớn (trên 10 người)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Xác Nhận Đặt Bàn</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

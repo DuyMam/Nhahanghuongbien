@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hương Biển Restaurant | Tinh Hoa Ẩm Thực</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-nav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="logo-icon-box">
+                    <i class="fa-solid fa-water"></i>
+                </div>
+                <span class="logo-text">HƯƠNG BIỂN</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-links">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Thực Đơn</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                </ul>
+        <div class="btn-reservation"><a class="nav-link" href="reservation.html">Đặt Bàn Ngay</a></div>
+    </nav>
+
+<!-- Hero Section với Carousel Tự Động Chạy -->
+<header class="hero-carousel-container">
+    <!-- Tìm đến dòng này và sửa lại cho đúng -->
+        <div id="heroHomeCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+        
+        <!-- Các nút chỉ số (Indicators) -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroHomeCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#heroHomeCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroHomeCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" data-bs-interval="4000">
+        <div class="hero-overlay"></div>
+            <img src="./img/Bếp trưởng.jpg" class="d-block w-100 hero-img" alt="Bếp trưởng Hương Biển chuyên nghiệp">
+        </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="hero-overlay"></div>
+                <img src="./img/Không gian nhà hàng2.jpg" class="d-block w-100 hero-img" alt="Không gian">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item" data-bs-interval="4000">
+                <div class="hero-overlay"></div>
+                <!-- Sử dụng ảnh hải sản vừa tạo nếu bạn đã lưu vào máy -->
+                <img src="./img/Hải sản.jpg" class="d-block w-100 hero-img" alt="Hải sản">
+            </div>
+        </div>
+
+        <!-- Nút điều khiển (Nên có để test thủ công xem nó có chạy không) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroHomeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroHomeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+<script>
+    // Đoạn code này sẽ ép Carousel phải tự chạy ngay khi trang load xong
+    document.addEventListener('DOMContentLoaded', function () {
+        var myCarousel = document.querySelector('#heroHomeCarousel');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000, // 3 giây chuyển 1 lần
+            ride: 'carousel',
+            pause: false // Không dừng khi di chuột vào
+        });
+    });
+</script>
+
+        <!-- Nội dung chữ (Hero Content) -->
+        <div class="hero-text-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Thêm class animate__animated để kích hoạt hiệu ứng -->
+                    <h1 class="animate__animated animate__fadeInDown">Tinh Hoa Ẩm Thực Biển</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">
+                        Trải nghiệm hương vị đại dương trong không gian sang trọng bậc nhất với đội ngũ đầu bếp tận tâm.
+                    </p>
+                    <div class="hero-btns animate__animated animate__zoomIn animate__delay-2s">
+                        <a href="menu.html" class="btn-main">Khám Phá Thực Đơn</a>
+                        <a href="reservation.html" class="btn-outline">Đặt Bàn Ngay</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nút điều khiển -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</header>
+
+    <!-- Featured Dishes -->
+    <section class="features">
+        <h2 class="section-title">Món Ăn Nổi Bật</h2>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80')"></div>
+                <h3>Pizza Hải Sản Special</h3>
+                <p>Sự kết hợp hoàn hảo giữa tôm, mực và phô mai cao cấp.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80')"></div>
+                <h3>Thăn Bò Nướng Đá</h3>
+                <p>Bò nhập khẩu mềm tan, đậm đà hương vị sốt tiêu đen.</p>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80')"></div>
+                <h3>Tráng Miệng Molten Cake</h3>
+                <p>Socola chảy ngọt ngào cho kết thúc bữa tiệc hoàn hảo.</p>
+            </div>
+        </div>
+        <div class="grid-container">
+    <!-- Món 1 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Pizza Hải Sản Special</h3>
+        <p>Sự kết hợp hoàn hảo giữa tôm, mực và phô mai cao cấp.</p>
+    </div>
+
+    <!-- Món 2 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Thăn Bò Nướng Đá</h3>
+        <p>Bò nhập khẩu mềm tan, đậm đà hương vị sốt tiêu đen.</p>
+    </div>
+
+    <!-- Món 3 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Tráng Miệng Molten Cake</h3>
+        <p>Socola chảy ngọt ngào cho kết thúc bữa tiệc hoàn hảo.</p>
+    </div>
+
+    <!-- Món 4 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1599321955726-e048426594af?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Cua Hoàng Đế Sốt Bơ</h3>
+        <p>Cua Alaska tươi sống quyện cùng sốt bơ tỏi béo ngậy.</p>
+    </div>
+
+    <!-- Món 5 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Salad Cá Hồi Na Uy</h3>
+        <p>Cá hồi tươi thái lát cùng rau hữu cơ và sốt chanh dây.</p>
+    </div>
+
+    <!-- Món 6 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Tôm Hùm Phô Mai</h3>
+        <p>Tôm hùm Nha Trang nướng cùng phô mai Mozzarella tan chảy.</p>
+    </div>
+
+    <!-- Món 7 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1598511757337-fe2cafc31ba0?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Steak Wagyu Thượng Hạng</h3>
+        <p>Bò Wagyu A5 với vân mỡ hoàn hảo, mềm như tan trong miệng.</p>
+    </div>
+
+    <!-- Món 8 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Mì Ý Carbonara</h3>
+        <p>Mì Ý truyền thống sốt kem trứng và thịt xông khói giòn rụm.</p>
+    </div>
+
+    <!-- Món 9 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=500&q=80')"></div>
+        <h3>Set Sushi Tổng Hợp</h3>
+        <p>Tuyển chọn những loại cá tươi ngon nhất từ đại dương.</p>
+    </div>
+
+    <!-- Món 10 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url(./img/Vịt\ Quay\ Bắc\ Kinh.jpg)"></div>
+        <h3>Vịt Quay Bắc Kinh</h3>
+        <p>Da vịt giòn rụm, thịt thơm mềm ăn kèm nước sốt đặc trưng.</p>
+    </div>
+
+    <!-- Món 11 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url(./img/Súp\ Bào\ Ngư.jpg)"></div>
+        <h3>Súp Bào Ngư</h3>
+        <p>Món súp bổ dưỡng với bào ngư tươi và nấm đông cô.</p>
+    </div>
+
+    <!-- Món 12 -->
+    <div class="card">
+        <div class="card-img" style="background-image: url(./img/Rượu\ Vang\ Đỏ\ Cao\ Cấp.jpg)"></div>
+        <h3>Rượu Vang Đỏ Cao Cấp</h3>
+        <p>Nâng tầm hương vị bữa tiệc với các loại vang nhập khẩu Pháp.</p>
+    </div>
+</div>
+    </section>
+
+   <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3 class="footer-logo">HƯƠNG BIỂN</h3>
+            <p class="footer-desc">
+                Tự hào mang đến hương vị hải sản tươi sống và tinh túy giữa lòng thành phố. Trải nghiệm không gian ẩm thực sang trọng và dịch vụ tận tâm nhất.
+            </p>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>Liên Kết Nhanh</h4>
+            <ul class="footer-links">
+                <li><a href="index.html"><i class="fas fa-angle-right"></i> Trang Chủ</a></li>
+                <li><a href="menu.html"><i class="fas fa-angle-right"></i> Thực Đơn</a></li>
+                <li><a href="about.html"><i class="fas fa-angle-right"></i> Giới Thiệu</a></li>
+                <li><a href="reservation.html"><i class="fas fa-angle-right"></i> Đặt Bàn</a></li>
+                <li><a href="contact.html"><i class="fas fa-angle-right"></i> Liên Hệ</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Giờ Mở Cửa</h4>
+            <ul class="opening-hours">
+                <li>Thứ 2 - Thứ 6: <span>08:00 - 22:00</span></li>
+                <li>Thứ 7 - Chủ Nhật: <span>07:00 - 23:00</span></li>
+                <li class="status"><i class="fas fa-circle"></i> Đang mở cửa</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Bản Tin & Khuyến Mãi</h4>
+            <p class="newsletter-desc">Đăng ký email để nhận các ưu đãi và thực đơn mới nhất từ chúng tôi.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email của bạn..." required>
+                <button type="submit" aria-label="Gửi"><i class="fas fa-paper-plane"></i></button>
+            </form>
+            <div class="footer-contact-info">
+                <p><i class="fas fa-phone-alt"></i> +84 763 171 649</p>
+                <p><i class="fas fa-envelope"></i> ni.thavongxai@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 <span>Hương Biển Restaurant</span>. Designed by <strong>Ni THAVONGXAI</strong></p>
+        <div class="footer-legal">
+            <a href="#">Chính sách bảo mật</a>
+            <span class="separator">|</span>
+            <a href="#">Điều khoản sử dụng</a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
